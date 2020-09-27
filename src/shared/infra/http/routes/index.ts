@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import appointmentsRouter from '@modules/appointments/infra/typeorm/entities/appointments.routes';
-import usersRouter from '@modules/users/infra/http/users.routes';
-import sessionsRouter from '@modules/users/infra/http/sessions.routes';
+import appointmentsRouter from '@modules/appointments/infra/http/routes/appointments.routes';
+import usersRouter from '@modules/users/infra/http/routes/users.routes';
+import sessionsRouter from '@modules/users/infra/http/routes/sessions.routes';
 
 const routes = Router();
 
