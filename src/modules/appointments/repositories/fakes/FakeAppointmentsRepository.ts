@@ -6,10 +6,10 @@ import IAppointmentRepository from '@modules/appointments/repositories/IAppointm
 import ICreateAppointmentDTO from '@modules/appointments/dtos/ICreateAppoinmentDTO';
 
 class AppointmentsRepository implements IAppointmentRepository {
-  private appointment: Appointment[] = [];
+  private appointments: Appointment[] = [];
 
   public async findByDate(date: Date): Promise<Appointment | undefined> {
-    const findAppointment = await this.appointment.find(appointment =>
+    const findAppointment = await this.appointments.find(appointment =>
       isEqual(appointment.date, date),
     );
 
@@ -23,6 +23,8 @@ class AppointmentsRepository implements IAppointmentRepository {
     const appointment = new Appointment();
 
     Object.assign(appointment, { id: uuid(), date, provider_id });
+
+    this.appointments.push(appointment);
 
     return appointment;
   }
