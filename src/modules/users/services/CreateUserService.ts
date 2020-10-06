@@ -14,7 +14,7 @@ interface IRequestDTO {
 @injectable()
 class CreateUserSevice {
   constructor(
-    @inject('UserRepository')
+    @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
     @inject('HashProvider')
