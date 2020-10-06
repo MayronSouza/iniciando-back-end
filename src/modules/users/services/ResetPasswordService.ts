@@ -14,7 +14,7 @@ interface IRequestDTO {
 @injectable()
 class ResetPasswordService {
   constructor(
-    @inject('UserRepository')
+    @inject('UsersRepository')
     private usersRepository: IUsersRepository,
 
     @inject('UserTokensRepository')
@@ -25,7 +25,7 @@ class ResetPasswordService {
   ) {}
 
   public async execute({ token, password }: IRequestDTO): Promise<void> {
-    const userToken = await this.userTonkensRepository.findBytoken(token);
+    const userToken = await this.userTonkensRepository.findByToken(token);
 
     if (!userToken) {
       throw new AppError('User token does not exists.');
