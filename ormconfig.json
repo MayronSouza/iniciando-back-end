@@ -4,7 +4,7 @@
   "port": "5432",
   "username": "postgres",
   "password": "dockerms",
-  "database": "gostack3_gobarberms",
+  "database": "gostack1_gobarberms",
   "entities": [
     "./src/modules/**/infra/typeorm/entities/*.ts"
   ],

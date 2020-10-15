@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 
 import ListProvidersService from '@modules/appointments/services/ListProvidersService';
 
-export default class ProvidersControler {
+export default class ProvidersController {
   public async index(req: Request, res: Response): Promise<Response> {
     const user_id = req.user.id;
 
