@@ -44,11 +44,11 @@
 
 **Regras de Negócio**
 
-- Cada agendamento deve durar 1h exatamente;
 - Os agendamentos devem estar disponíveis entre 8h e 18h (Primeiro às 8h, último às 17h);
-- O usuário não pode agendar um horário já ocupado
 - O usuário não pode agendar um horário que já passou;
 - O usuário não pode agendar serviço consigo mesmo;
+- Cada agendamento deve durar 1h exatamente;
+- O usuário não pode agendar um horário já ocupado
 
 # Painel do Prestador
 
