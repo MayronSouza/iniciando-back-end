@@ -14,9 +14,11 @@ import '@shared/container';
 
 const app = express();
 
+const PORT = process.env.APP_PORT;
+
 app.use(cors());
 app.use(express.json());
-app.use('/file', express.static(uploadConfig.tmpFolder));
+app.use('/files', express.static(uploadConfig.tmpFolder));
 app.use(routes);
 app.use(errors());
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
@@ -33,4 +35,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-app.listen(3333, () => console.log('🚀 Server started on port 3333!'));
+app.listen(PORT, () => console.log(`🚀 Server started on port ${PORT}!`));
